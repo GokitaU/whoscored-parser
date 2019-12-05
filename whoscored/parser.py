@@ -1,11 +1,13 @@
 from bs4 import BeatifulSoup
+from request import get_page
 
 class ParseGame:
     def __init__(self, url):
         self._url = url
     
     def parse(self):
-
+        page = get_page(self._url)
+        soup = BeautifulSoup(page, 'html.parser')
     
     def __str__(self):
         '''
